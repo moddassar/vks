@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-argo
+  name: nginx-argo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-argo
+  template:
+    metadata:
+      labels:
+        app: nginx-argo
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-argo
