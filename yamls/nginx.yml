@@ -4,6 +4,7 @@ metadata:
   labels:
     app: nginx-argo
   name: nginx-argo
+  namespace: test
 spec:
   replicas: 1
   selector:
